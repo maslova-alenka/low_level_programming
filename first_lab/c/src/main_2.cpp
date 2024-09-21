@@ -22,9 +22,8 @@ cycle1_end:
     i = 0;
 
     int m = n - 1; //r10d
-    //int k = m - i; //r12d
 
-    int k;
+    int k;  //r12d
     int temp;
 
 cycle2_start:

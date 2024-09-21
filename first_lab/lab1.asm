@@ -13,7 +13,6 @@ main:
     xor ecx, ecx
     
 .cycle1_start:
-
     cmp ecx, r8d
     je .cycle1_end
     
@@ -32,7 +31,6 @@ main:
   
     
 .cycle2_start:
-
     cmp ecx, r10d ;if (i == m)                      
     je .cycle2_end 
     
@@ -42,6 +40,7 @@ main:
     sub r12d, ecx ;k-i
 
     jmp .cycle3_start
+    
 .cycle3_start:
     
     cmp r9d, r12d ;if (j == k)
@@ -59,9 +58,11 @@ main:
 .no_swap:    
     add r9d,1
     jmp .cycle3_start
+    
 .cycle3_end:
     add ecx,1
     jmp .cycle2_start
+    
 .cycle2_end:
 
     xor ecx,ecx
