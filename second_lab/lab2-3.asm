@@ -20,6 +20,7 @@ main:
     fld dword[a]
     fyl2x
     fdiv
+    fxch st0, st1
     fpatan
     fstp dword[x]
     
