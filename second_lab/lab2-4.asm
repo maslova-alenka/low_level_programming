@@ -24,9 +24,8 @@ fld dword[a]
 fmul
 fld dword[two]
 fmul
-fstp dword[help]
+fst dword[help]
 
-fld dword[help]
 fld dword[e]
 fyl2x
 fld1
@@ -36,9 +35,9 @@ f2xm1
 fadd
 fscale
 fstp st1
-fstp dword[help] 
+fst dword[help] 
 
-fld dword[help]
+
 fld1
 fadd
 fstp dword[num]

@@ -1,6 +1,6 @@
 %include "io64.inc"
 
-section .data
+section .rodata
 space db ' ', 0
 
 section .bss
@@ -16,7 +16,7 @@ main:
     cmp ecx, r8d
     je .cycle1_end
     
-    GET_DEC 4, [arr + 4*ecx]
+    GET_DEC 4, [arr + 4*rcx]
     
     add ecx,1
     jmp .cycle1_start
@@ -50,8 +50,8 @@ main:
     mov ebx, [arr + 4*r9d + 4]
     cmp eax, ebx
     
-    jbe .no_swap  
-    
+    jle .no_swap  ; jle
+   
     mov [arr + 4*r9d], ebx
     mov [arr + 4*r9d + 4], eax
     
